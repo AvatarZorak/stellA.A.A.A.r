@@ -9,6 +9,11 @@ html, body{
     display: none;
     flex-direction: column;
     align-self: center;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: -150px;
+    left: 50%;
+    top: 90%;
 }
 
 #options {
@@ -19,7 +24,7 @@ html, body{
 
 .stars {
     display: inline-block;
-    width: 100px;
+    width: 300px;
     height: 30px;
     color:black;
     font-size: 20px;
@@ -78,4 +83,14 @@ button:hover {
     width: 20px;
     height: 20px;
     background-color: black;
+}
+
+.star{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -150px;
+    top: 50%;
+    left: 50%;
 }
