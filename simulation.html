@@ -5,27 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Simulation</title>
     </head>
-    <body>
+    <body onload = "generateStars()">
         <div id="wholepage">
-            <script src="simulation.js">
+            <script src="simulation.js"></script>
 
-            </script>
-            <div class="flex-container" id="menu">
-                <button type="button" class="stars" onclick="showOptions()">star 1</button>
-                <button type="button" class="stars" onclick="showOptions()">star 2</button>
-                <button type="button" class="stars" onclick="showOptions()">star 3</button>
-                <button type="button" class="stars" onclick="showOptions()">star 4</button>
+            <div class="flex-container" id="menu-stars">
+                <button type="button" class="star-options" onclick="showOptions()">star 1</button>
+                <button type="button" class="star-options" onclick="showOptions()">star 2</button>
+                <button type="button" class="star-options" onclick="showOptions()">star 3</button>
+                <button type="button" class="star-options" onclick="showOptions()">star 4</button>
             </div>
-            <div class="flex-container" id="options">
-                <button type="button" class="parametars" id="margin-top">parametar1</button>
-                <button type="button" class="parametars">parametar2</button>
-                <button type="button" class="parametars">parametar3</button>
-                <button type="button" class="parametars">parametar4</button>
+            <div class="flex-container" id="menu-parameters">
+                <button type="button" class="parameters">parametar1</button>
+                <button type="button" class="parameters">parametar2</button>
+                <button type="button" class="parameters">parametar3</button>
+                <button type="button" class="parameters">parametar4</button>
             </div>
-            <button type="button" id="close" onclick="closeMenu()">X</buttton>
-            <button type="button" class="b" id="show" onclick="showMenuStars()">MENU</button>
-        
-            <img src = "dog.png" class = "star">
+            <button type="button" id="close-button" onclick="closeMenu()">X</buttton>
+            <button type="button" class="menu-button" id="show-menu-stars" onclick="showMenuStars()">MENU</button>
         </div>
     </body>
 </html>
