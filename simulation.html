@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="simulation.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Simulation</title>
-    </head>
-    <body onload = "generateStars()">
-        <div id="wholepage">
-            <script src="simulation.js"></script>
+  <head>
+    <link rel="stylesheet" href="simulation.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simulation</title>
+  </head>
 
-            <div class="flex-container" id="menu-stars">
-                <button type="button" class="star-options" onclick="showOptions()">star 1</button>
-                <button type="button" class="star-options" onclick="showOptions()">star 2</button>
-                <button type="button" class="star-options" onclick="showOptions()">star 3</button>
-                <button type="button" class="star-options" onclick="showOptions()">star 4</button>
-            </div>
-            <div class="flex-container" id="menu-parameters">
-                <button type="button" class="parameters">parametar1</button>
-                <button type="button" class="parameters">parametar2</button>
-                <button type="button" class="parameters">parametar3</button>
-                <button type="button" class="parameters">parametar4</button>
-            </div>
-            <button type="button" id="close-button" onclick="closeMenu()">X</buttton>
-            <button type="button" class="menu-button" id="show-menu-stars" onclick="showMenuStars()">MENU</button>
-        </div>
-    </body>
+  <body onload = "generateStars()">
+    <div id="wholepage">
+      <script src="simulation.js"></script>
+
+      <div class="flex-container" id="menu-stars">
+        <button type="button" class="star-options" onclick="showOptions()">star 1</button>
+        <button type="button" class="star-options" onclick="showOptions()">star 2</button>
+        <button type="button" class="star-options" onclick="showOptions()">star 3</button>
+        <button type="button" class="star-options" onclick="showOptions()">star 4</button>
+      </div>
+
+      <div class="flex-container" id="menu-parameters">
+        <button type="button" class="parameters">parametar1</button>
+        <button type="button" class="parameters">parametar2</button>
+        <button type="button" class="parameters">parametar3</button>
+        <button type="button" class="parameters">parametar4</button>
+      </div>
+
+      <button type="button" id="close-button" onclick="closeMenu()">X</buttton>
+      <button type="button" class="menu-button" id="show-menu-stars" onclick="showMenuStars()">MENU</button>
+    </div>
+  </body>
 </html>
