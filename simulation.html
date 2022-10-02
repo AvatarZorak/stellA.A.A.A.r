@@ -6,26 +6,32 @@
     <title>Simulation</title>
   </head>
 
-  <body onload = "generateStars()">
+  <body onload = "onStart()">
     <div id="wholepage">
       <script src="simulation.js"></script>
 
       <div class="flex-container" id="menu-stars">
-        <button type="button" class="star-options" onclick="showOptions()">star 1</button>
-        <button type="button" class="star-options" onclick="showOptions()">star 2</button>
-        <button type="button" class="star-options" onclick="showOptions()">star 3</button>
-        <button type="button" class="star-options" onclick="showOptions()">star 4</button>
+        <button type="button" class="star-options" onclick="starOptions(1)">star 1</button>
+        <button type="button" class="star-options" onclick="starOptions(2)">star 2</button>
+        <button type="button" class="star-options" onclick="starOptions(3)">star 3</button>
+        <button type="button" class="star-options" onclick="starOptions(4)">star 4</button>
       </div>
 
       <div class="flex-container" id="menu-parameters">
-        <button type="button" class="parameters">parametar1</button>
-        <button type="button" class="parameters">parametar2</button>
-        <button type="button" class="parameters">parametar3</button>
+        <button type="button" class="parameters">Color:<input type = "color" id = "color"></button>
+        <button type="button" class="parameters">Size:<input type = "range"  id = "size"></button>
+        <button type="button" class="parameters">Speed:<input type = "range" id = "speed"></button>
         <button type="button" class="parameters">parametar4</button>
       </div>
 
+      <div class = "flex-container" id = "menu-speed">
+        <button type = "button" class = "speed-options" onclick = "set_speed_level(-1)">bw</button>
+        <button type = "button" class = "speed-options" onclick = "set_speed_level(0)">p</button>
+        <button type = "button" class = "speed-options" onclick = "set_speed_level(1)">fw</button>
+      </div>
+
       <button type="button" id="close-button" onclick="closeMenu()">X</buttton>
-      <button type="button" class="menu-button" id="show-menu-stars" onclick="showMenuStars()">MENU</button>
+      <button type="button" class="menu-button" id="show-menu-stars" onclick="menuButton()">MENU</button>
     </div>
   </body>
 </html>

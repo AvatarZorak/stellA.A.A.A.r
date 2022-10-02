@@ -41,7 +41,7 @@ html, body{
 .parameters {
   display: inline-block;
   width: 200px;
-  height: 30px;
+  height: 40px;
   color:black;
   font-size: 15px;
   font-weight: bold;
@@ -95,3 +95,34 @@ button:hover {
     z-index: 0;
 }
 
+#menu-speed {
+    display: none;
+    align-self: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    z-index: 1;
+  }
+
+.speed-options {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color:azure;
+}
+
+#giant-stars{
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#star-giant1 {
+    display: flex;
+    border: solid red 5px;
+}
