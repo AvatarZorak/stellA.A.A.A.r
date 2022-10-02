@@ -43,10 +43,15 @@ function starOptions(star_no) {
 const background_stars_count = 350;
 
 setInterval( () => {
-   stars = document.getElementsByClassName('background-stars');
+   background_stars = document.getElementsByClassName('background-stars');
+   giant_stars = document.getElementsByClassName('giant-stars');
 
    for(var i = 0; i < background_stars_count; i++) {
-      twinkle(stars[i], randomInt(25, 100), randomInt(1, 3));
+      twinkle_background_stars(background_stars[i], randomInt(100 - document.getElementById('background-speed').value, 100), randomInt(1, 3));
+   }
+
+   for(var i = 0; i < 4; i++) {
+      twinkle_giant_stars(giant_stars[i], randomInt(100 - star_speeds[i], 100));
    }
 
    if(star_number != 0) {
@@ -99,8 +104,8 @@ function generateGiantStars() {
       image.style.position = "static";
 
 
-      image.style.top = `${randomInt(0, 80)}vh`;
-      image.style.left = `${randomInt(0, 80)}vw`;
+      image.style.top = `${randomInt(0, 75)}vh`;
+      image.style.left = `${randomInt(0, 75)}vw`;
 
       image.style.width = `${width_height_size}px`;
       image.style.height = `${width_height_size}px`;
@@ -120,6 +125,9 @@ function generateGiantStars() {
 
       div.style.borderRadius = "50%";
 
+      div.style.opacity = "90%";
+      div.style.backgroundColor = "silver";
+
       environment.appendChild(div);
 
 
@@ -129,26 +137,24 @@ function generateGiantStars() {
    }
 }
 
-function twinkle(star, opacity, speed) {
-   star.style.opacity = `${opacity * speed}%`
-}
-
 function highlighted_star(star_number) {
    var stars = document.getElementsByClassName('giant-stars');
    var star_index = star_number - 1;
 
    for(var i = 0; i < 4; i++) {
-      stars[i].style.border = "none";
+      document.getElementById(`star-giant${i}_div`).style.border = "none";
    }
 
-   stars[star_index].style.border = "solid azure 2px";
+   document.getElementById(`star-giant${star_index}_div`).style.border = "solid red 3px";
 
    document.getElementById('size').value = star_sizes[star_index];
    document.getElementById('color').value = star_colors[star_index];
+   document.getElementById('speed').value = star_speeds[star_index];
 }
 
 var star_sizes = [50, 50, 50, 50];
-var star_colors = ['#000000', '#000000', '#000000', '#000000'];
+var star_colors = ['#C0C0C0', '#C0C0C0', '#C0C0C0', '#C0C0C0'];
+var star_speeds = [50, 50, 50, 50];
 
 function make_changes(star_number) {
    var stars = document.getElementsByClassName('giant-stars');
@@ -165,7 +171,16 @@ function make_changes(star_number) {
    
    //COLOR
    div.style.backgroundColor = `${document.getElementById('color').value}`;
-   star_colors[star_index] = document.getElementById('colors').value;
+   star_colors[star_index] = document.getElementById('color').value;
 
-   console.log(document.getElementById('color').value);
+   //SPEED
+   star_speeds[star_index] = document.getElementById('speed').value;
+}
+
+function twinkle_background_stars(star, opacity, speed) {
+   star.style.opacity = `${opacity * speed}%`
+}
+
+function twinkle_giant_stars(star, opacity) {
+   star.style.opacity = `${opacity}%`;
 }
